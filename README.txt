@@ -1,20 +1,19 @@
 *--------------------------------------------*
-API INSTALLATION & EXECUTION INSTRUCTIONS:
+API / DATABASE
 
-1. Open API.sln in Visual Studio, VS 2019 Preferred.
-2. Set Database project as Startup Project
-3. Run Database
-4. Once built, Locate and execute the "InsertStatements.sql" file in the database project
-5. Once executed, the database should be populated.
-6. Set API as startup project and run.
+1. Open solution file in VS
+2. Right click database and click build
+3. Right click database and click publish
+4. Select Projects V13 as publish server
+5. If database is unpopulated, run InsertStatements.sql script
+6. Run API 
 
 *--------------------------------------------*
-FRONT END INSTALLATION & EXECUTION INSTRUCTIONS:
+REACT GUI
 
-1. Open Visual Studio Code
-2. Open the "react-frontend" folder located in the Case-Studies folder.
-3. Open terminal in VS Code
-4. Navigate terminal to the "react-frontend" directory
-5. Run command "npm i --save" to install dependencies
-6. Run command "npm start" to run the front-end app.
+1. Open VS Code
+2. Open the "react-frontend" folder in the application.
+3. Open terminal
+4. Run "npm i --save" to install relevant dependencies
+5. Run"npm start" to run the GUI.
 
