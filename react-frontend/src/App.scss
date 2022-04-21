@@ -1,0 +1,235 @@
+@media (prefers-reduced-motion: no-preference) {
+    .App-logo {
+        animation: App-logo-spin infinite 20s linear;
+    }
+}
+
+.App-header {
+    background-color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: black;
+}
+
+/*@media (max-width: 100px) {*/
+    .Dashboard h3 {
+       text-align: center;
+    }
+    .Dashboard p {
+      text-align: center;
+    }
+    .Dashboard button {
+        margin: auto !important;
+    }
+/*}*/
+
+.Home img {
+    width: 100% !important;
+    object-fit: contain;
+}
+
+.Home .jumbotron {
+    background-color: white !important;
+}
+
+.Home p {
+    margin-top: 50px;
+}
+
+.Home #jumboText {
+    margin-top: 100px;
+}
+
+.jumbotron {
+    background-color: white;
+}
+
+.Login {
+    padding: 60px 0;
+}
+
+form {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.Login form {
+    margin: 0 auto;
+    max-width: 320px;
+}
+
+.Signup form {
+    margin: 0 auto;
+    max-width: 700px;
+}
+
+.row {
+    margin-left: unset !important;
+    margin-right: unset !important;
+}
+
+a {
+    text-decoration: white !important;
+}
+
+$accent-color: #f76540;
+.btn-secondary {
+    background: $accent-color !important;
+    border-color: #fff !important;
+    color: white !important;
+    &:hover,
+    &:focus,
+    &.focus {
+        background: darken($accent-color, 20%) !important;
+        border-color: none !important;
+        color: white !important;
+        //background-color: $accent-color-lighter !important;
+        //border-color: $accent-color-lighter-50alpha !important;
+        &:focus,
+        &.focus {
+            box-shadow: 0 0 0 0.2rem $accent-color !important;
+        }
+    }
+}
+
+.cards {
+    padding-top: 5%;
+    padding-right: 5px;
+    padding-left: 10px;
+}
+
+.card {
+    min-height: 250px;
+    min-width: 200px !important;
+    text-align: center;
+    color: black;
+    margin: 50px;
+    //background-color: lightgray !important;
+    border-width: 5px;
+    border-color: $accent-color !important;
+}
+
+.card-header {
+    background-color: $accent-color !important;
+    color: whitesmoke;
+}
+
+.Nav {
+    display: flow-root;
+}
+
+#Logo {
+    width: 60px;
+    height: 60px;
+}
+
+.Logo {
+    width: 150px;
+    margin: unset;
+}
+
+.btn {
+    font-weight: bold;
+}
+
+.btn-primary {
+    background: none !important;
+    border: white !important;
+    color: $accent-color !important;
+    &:hover,
+    &:focus,
+    &.focus {
+        background: $accent-color !important;
+        border-color: $accent-color !important;
+        color: white !important;
+        //background-color: $accent-color-lighter !important;
+        //border-color: $accent-color-lighter-50alpha !important;
+        &:focus,
+        &.focus {
+            box-shadow: 0 0 0 0.2rem $accent-color !important;
+        }
+    }
+}
+
+.Accept-Button:hover {
+    background-color: #4CBB17 !important;
+}
+
+.Reject-Button:hover {
+    background-color: brown !important;
+}
+
+.App-link {
+    color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+img {
+    height: 350px;
+    width: 250px;
+    padding-bottom: 15px;
+}
+
+@media (min-width: 1000px) {
+    .Component {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .RequestTable {
+        width: 80% !important;
+    }
+    .Wrapper {
+        width: 80%;
+        box-shadow: 3px 3px 0.5rem $accent-color !important;
+        border: 0px solid $accent-color;
+        text-align: center;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+    .ItemBox {
+        padding: 30px 25px 20px 20px;
+        padding-left: 20px;
+    }
+    .QuoteBox {
+        padding-top: 50px;
+    }
+    .RequestWrapper {
+        box-shadow: 3px 3px 0.5rem $accent-color !important;
+        border: 0px solid $accent-color;
+        text-align: center;
+        justify-content: center;
+        padding-bottom: 10px;
+    }
+    .ItemInfo {
+        float: left;
+        text-align: left;
+        //border: 1px solid red;
+        padding: 30px 25px 20px 20px;
+        padding-left: 20px;
+    }
+    .ImageBox {
+        width: 50%;
+        float: right;
+        padding: 10px 25px 0px 30px;
+    }
+    .Error {
+        color: red;
+    }
+    .card:not(.defaultCard):hover {
+        transform: scale(1.1);
+        transition-duration: 0.3s;
+        cursor: pointer;
+    }
+}

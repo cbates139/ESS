@@ -1,0 +1,14 @@
+Parameterised queries
+
+Auth tokens
+
+CSP
+
+Protected Routes
+
+high coupling low cohesion components
+
+Controller Classes design patterns - check for more
+
+check through presentation see what youve added
+

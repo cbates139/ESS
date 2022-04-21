@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>Database</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{4c198bc9-100d-46a5-928f-6ee2a9f788ca}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql130DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>Database</RootNamespace>
+    <AssemblyName>Database</AssemblyName>
+    <ModelCollation>1033, CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="dbo\" />
+    <Folder Include="dbo\Tables\" />
+    <Folder Include="dbo\Procedures" />
+    <Folder Include="Scripts\" />
+    <Folder Include="dbo\Views" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="dbo\Tables\User.sql" />
+    <Build Include="dbo\Tables\Quote.sql" />
+    <Build Include="dbo\Tables\Item.sql" />
+    <Build Include="dbo\Tables\UserSupplier.sql" />
+    <Build Include="dbo\Tables\UserEmployee.sql" />
+    <Build Include="dbo\Tables\PaymentMethod.sql" />
+    <Build Include="dbo\Tables\Address.sql" />
+    <Build Include="dbo\Tables\UserQuotes.sql" />
+    <Build Include="dbo\Tables\SupplierItems.sql" />
+    <Build Include="dbo\Tables\QuoteItems.sql" />
+    <Build Include="dbo\Procedures\sprGetUser.sql" />
+    <Build Include="dbo\Procedures\sprDeleteItem.sql" />
+    <Build Include="dbo\Procedures\sprGetItem.sql" />
+    <Build Include="dbo\Procedures\sprGetQuote.sql" />
+    <Build Include="dbo\Procedures\sprGetSupplierItems.sql" />
+    <Build Include="dbo\Procedures\sprGetUserQuotes.sql" />
+    <Build Include="dbo\Procedures\sprInsertItem.sql" />
+    <Build Include="dbo\Procedures\sprInsertQuote.sql" />
+    <Build Include="dbo\Procedures\sprGetItems.sql" />
+    <Build Include="dbo\Procedures\sprGetQuotes.sql" />
+    <Build Include="dbo\Procedures\sprGetQuoteRequests.sql" />
+    <Build Include="dbo\Procedures\sprGetQuoteRequestsForUser.sql" />
+    <Build Include="dbo\Procedures\sprGetQuoteRequest.sql" />
+    <Build Include="dbo\Procedures\sprInsertQuoteRequest.sql" />
+    <Build Include="dbo\Procedures\sprAcceptQuote.sql" />
+    <Build Include="dbo\Procedures\sprRejectQuote.sql" />
+    <Build Include="dbo\Procedures\sprInsertUser.sql" />
+    <Build Include="dbo\Procedures\sprGetUsername.sql" />
+    <Build Include="dbo\Procedures\sprGetEmail.sql" />
+    <Build Include="dbo\Views\AllUsersQuotesView.sql" />
+    <Build Include="dbo\Views\AllUsersView.sql" />
+    <Build Include="dbo\Views\CustomersView.sql" />
+    <Build Include="dbo\Views\EmployeesView.sql" />
+    <Build Include="dbo\Views\ItemsView.sql" />
+    <Build Include="dbo\Views\PaymentMethodsView.sql" />
+    <Build Include="dbo\Views\PendingUsersQuotesView.sql" />
+    <Build Include="dbo\Views\ProcessedUsersQuotesView.sql" />
+    <Build Include="dbo\Views\QuotesView.sql" />
+    <Build Include="dbo\Views\SuppliersItemsView.sql" />
+    <Build Include="dbo\Views\SuppliersView.sql" />
+    <Build Include="dbo\Views\UsersAddressView.sql" />
+    <Build Include="dbo\Views\UsersPendingQuoteItemsView.sql" />
+    <Build Include="dbo\Views\UsersProcessedQuoteItemsView.sql" />
+    <None Include="InsertStatements.sql" />
+  </ItemGroup>
+</Project>
